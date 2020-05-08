@@ -40,11 +40,11 @@ def cityreader(cities=[]):
                 population, density, timezone, zips] = c
             if record_no > 0:
                 # create a new obj of class City
-                cities.append(City(city, lat, lng, state=state_name,
+                cities.append(City(city, float(lat), float(lng), state=state_name,
                                    county=county_name, pop=population,
                                    density=density, tz=timezone, zc=zips))
             record_no += 1
-        print(f"read {record_no} records from CSV")
+        # print(f"read {record_no} records from CSV")
     return cities
 
 
@@ -52,7 +52,7 @@ cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
-    print(c)
+    print(f"{c.name}, {c.lat}, {c.lon}")
 
 # STRETCH GOAL!
 #
