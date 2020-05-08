@@ -35,7 +35,7 @@ class Car(GroundVehicle):
     pass
 
 
-class MotorCycle(GroundVehicle):
+class Motorcycle(GroundVehicle):
     pass
 
 
@@ -46,9 +46,3 @@ class Starship(FlightVehicle):
 class Airplane(FlightVehicle):
     pass
 
-
-if __name__ == "__main__":
-    testCar = Car()
-    testBike = MotorCycle()
-    testPlane = Airplane()
-    print(testCar, testBike, testPlane)
